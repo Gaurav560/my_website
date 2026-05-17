@@ -51,7 +51,7 @@ export function HeroSection() {
         <motion.h1
           id="hero-name"
           variants={up}
-          className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
+          className="select-none font-display text-[clamp(3rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
         >
           GAURAV
         </motion.h1>
@@ -61,14 +61,14 @@ export function HeroSection() {
           <motion.span
             variants={up}
             aria-hidden="true"
-            className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
+            className="select-none font-display text-[clamp(3rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
           >
             SHARMA
           </motion.span>
 
           <motion.div
             variants={up}
-            className="mb-2 max-w-[22rem] border-2 border-ink bg-white p-5 shadow-brutal theme-transition"
+            className="mb-2 w-full border-2 border-ink bg-white p-5 shadow-brutal theme-transition sm:max-w-[22rem]"
           >
             <p className="font-display text-sm font-semibold uppercase leading-loose tracking-wide text-ink">
               Backend Engineer

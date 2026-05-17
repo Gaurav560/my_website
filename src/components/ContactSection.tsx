@@ -49,13 +49,13 @@ export function ContactSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3, ease }}
             whileHover={{ x: 8 }}
-            className="group inline-flex w-fit items-center gap-4 font-script text-[clamp(1.8rem,4.5vw,4rem)] font-bold leading-none text-paper transition-colors duration-200 hover:text-orange"
+            className="group flex items-center gap-4 font-script text-[clamp(1.6rem,5vw,4rem)] font-bold leading-none text-paper transition-colors duration-200 hover:text-orange"
             aria-label="Send an email"
           >
-            {email.replace('mailto:', '')}
+            <span className="min-w-0 break-all">{email.replace('mailto:', '')}</span>
             <span
               aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-x-2"
+              className="shrink-0 transition-transform duration-300 group-hover:translate-x-2"
             >
               →
             </span>
@@ -68,13 +68,13 @@ export function ContactSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.38, ease }}
             whileHover={{ x: 8 }}
-            className="group inline-flex w-fit items-center gap-4 font-display text-[clamp(1.1rem,3vw,2.5rem)] font-black uppercase leading-none tracking-tight text-paper transition-colors duration-200 hover:text-orange"
+            className="group flex items-center gap-4 font-display text-[clamp(1rem,3vw,2.5rem)] font-black uppercase leading-none tracking-tight text-paper transition-colors duration-200 hover:text-orange"
             aria-label="Call phone number"
           >
-            {profile.phone}
+            <span>{profile.phone}</span>
             <span
               aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-x-2"
+              className="shrink-0 transition-transform duration-300 group-hover:translate-x-2"
             >
               →
             </span>

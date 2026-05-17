@@ -49,7 +49,7 @@ export function WritingSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.15 + i * 0.1, ease }}
-            className="group flex items-start gap-5 border-b-2 border-ink py-8 transition-colors duration-300 hover:bg-cream"
+            className="group flex items-start gap-4 border-b-2 border-ink py-6 transition-colors duration-300 hover:bg-cream sm:gap-5 sm:py-8"
             aria-label={`Read: ${post.title}`}
           >
             {/* Number */}
@@ -75,7 +75,7 @@ export function WritingSection() {
             {/* Arrow */}
             <span
               aria-hidden="true"
-              className="mt-1 shrink-0 font-display text-xl font-bold text-ink transition-transform duration-300 group-hover:translate-x-2 group-hover:text-orange"
+              className="mt-1 hidden shrink-0 font-display text-xl font-bold text-ink transition-transform duration-300 group-hover:translate-x-2 group-hover:text-orange sm:block"
             >
               →
             </span>

@@ -15,7 +15,7 @@ export function AboutSection() {
       aria-labelledby="about-title"
       className="border-t-2 border-ink py-20 lg:py-28"
     >
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
         {/* Left — label + heading */}
         <div className="lg:col-span-4">
           <motion.div
