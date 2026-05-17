@@ -28,7 +28,7 @@ export function AboutSection() {
               className="font-display text-[clamp(3rem,6vw,5rem)] font-black uppercase leading-none tracking-tighter text-ink"
             >
               WHO
-              <br />I AM
+              <br />AM i
             </h2>
             <div className="mt-6 h-[3px] w-12 bg-orange" />
             <p className="mt-6 font-body text-sm leading-relaxed text-muted">
