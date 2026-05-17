@@ -50,7 +50,7 @@ export function SkillsSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, delay: 0.1 + i * 0.07, ease }}
-              className="group border-2 border-paper/20 p-5 transition-all duration-300 hover:border-orange hover:bg-dark"
+              className="group border-2 border-paper/20 p-5 transition-all duration-300 hover:border-orange hover:bg-paper/5"
             >
               <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-orange">
                 {group.heading}
