@@ -14,7 +14,7 @@
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-mono:    'Space Mono', monospace;
   --font-body:    'Inter', system-ui, sans-serif;
-  --font-script:  'Dancing Script', cursive;
+  --font-script:  'Playfair Display', serif;
 }
 
 /* ── Dark theme overrides ──────────────────────────────────── */
