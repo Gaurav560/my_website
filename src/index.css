@@ -14,6 +14,7 @@
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-mono:    'Space Mono', monospace;
   --font-body:    'Inter', system-ui, sans-serif;
+  --font-script:  'Dancing Script', cursive;
 }
 
 /* ── Dark theme overrides ──────────────────────────────────── */
@@ -81,6 +82,7 @@
 @layer utilities {
   .font-display { font-family: var(--font-display); }
   .font-body    { font-family: var(--font-body); }
+  .font-script  { font-family: var(--font-script); }
 
   /* Brutalist offset shadows — adapt automatically with theme */
   .shadow-brutal    { box-shadow: 5px 5px 0px var(--color-ink); }
