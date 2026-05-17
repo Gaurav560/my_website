@@ -49,7 +49,7 @@ export function ContactSection() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3, ease }}
             whileHover={{ x: 8 }}
-            className="group inline-flex w-fit items-center gap-4 font-script italic text-[clamp(1.8rem,4.5vw,4rem)] font-bold leading-none text-paper transition-colors duration-200 hover:text-orange"
+            className="group inline-flex w-fit items-center gap-4 font-script text-[clamp(1.8rem,4.5vw,4rem)] font-bold leading-none text-paper transition-colors duration-200 hover:text-orange"
             aria-label="Send an email"
           >
             {email.replace('mailto:', '')}
