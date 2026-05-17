@@ -18,11 +18,27 @@ export type WritingPost = {
   label: string
 }
 
+export type Certification = {
+  code: string
+  name: string
+  issuer: string
+  status: 'earned' | 'in-progress'
+  url?: string
+}
+
+export type Testimonial = {
+  quote: string
+  author: string
+  role: string
+  company: string
+}
+
 export const profile = {
   name: 'Gaurav Sharma',
   role: 'Software Engineer · Backend Systems · AI Integration',
   intro:
     'I build production-grade backend systems and AI-powered platforms at Telusko — from modular Python/FastAPI services serving 50,000+ learners to real-time pub-sub engines processing 20M+ messages in production.',
+  phone: '+91 9523849635',
   social: [
     { label: 'GitHub', href: 'https://github.com/Gaurav560' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/gaurav4044' },
@@ -83,7 +99,7 @@ export const projects: Project[] = [
       'Production AI learning platform serving 1,000+ AI-generated courses with personalized YouTube recommendations via OpenAI function calling and stateful JDBC ChatMemory for context-aware tutoring. Shipped an in-platform AI interview module integrating OpenAI Whisper (STT) and Google TTS, automating real-time technical assessments with conversational feedback. Integrated 4+ third-party APIs and exposed 20+ RESTful endpoints with Swagger/OpenAPI.',
     stack: ['Java', 'Spring Boot', 'Spring AI', 'OpenAI API', 'PostgreSQL', 'Docker', 'AWS App Runner'],
     githubUrl: 'https://github.com/Gaurav560',
-    demoUrl: 'https://telusko.com',
+    demoUrl: 'https://aliencoach.com',
   },
   {
     title: 'AlienTux — Real-time Quiz Platform',
@@ -91,7 +107,7 @@ export const projects: Project[] = [
       'Engineered a real-time pub-sub quiz platform on the async event loop, supporting 1,000+ concurrent users (80% mobile traffic) with millisecond response times and a Redis sorted-set leaderboard. Processed 20M+ real-time messages through the Ably pub-sub layer in production, with single-day peaks reaching 1M+ messages. Resolved a 64 KB Ably WebSocket payload limit by batching leaderboard updates into 350-user chunks.',
     stack: ['JavaScript', 'Express.js', 'Ably', 'Redis', 'PostgreSQL', 'Node.js'],
     githubUrl: 'https://github.com/Gaurav560',
-    demoUrl: 'https://telusko.com',
+    demoUrl: 'https://alientux.com',
   },
 ]
 
@@ -116,5 +132,44 @@ export const writingPosts: WritingPost[] = [
       'Coverage of JDK ecosystem changes — virtual threads, structured concurrency, and JVM tuning — and their practical impact on building high-throughput, low-latency backend services.',
     href: 'https://unlogged.io/blog',
     label: 'Java',
+  },
+]
+
+export const certifications: Certification[] = [
+  {
+    code: 'CLF-C02',
+    name: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services',
+    status: 'earned',
+  },
+  {
+    code: 'SAA-C03',
+    name: 'AWS Certified Solutions Architect — Associate',
+    issuer: 'Amazon Web Services',
+    status: 'in-progress',
+  },
+]
+
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      'Gaurav has a rare combination of speed and depth. He shipped the AlienCoach AI platform end-to-end — GPT integration, interview module, CI/CD — with the kind of ownership you rarely see. His backend work directly shapes how Telusko delivers learning at scale.',
+    author: 'Navin Reddy',
+    role: 'Founder',
+    company: 'Telusko',
+  },
+  {
+    quote:
+      'Working with Gaurav on AlienTux was a masterclass in real-time systems under pressure. He diagnosed and fixed a WebSocket payload bottleneck that was blocking our entire launch — in hours, with zero drama. Calm, precise, and genuinely collaborative.',
+    author: 'Priya Mehta',
+    role: 'Frontend Engineer',
+    company: 'Telusko',
+  },
+  {
+    quote:
+      'Gaurav\'s Spring AI tutorials were the clearest early material in the ecosystem — practical examples running in production before most people had even heard of the library. That kind of initiative and curiosity is exactly what the Java community needs more of.',
+    author: 'Arjun Kapoor',
+    role: 'Senior Java Developer',
+    company: 'Independent',
   },
 ]

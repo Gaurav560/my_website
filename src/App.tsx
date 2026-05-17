@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AboutSection } from './components/AboutSection'
+import { CertificationsSection } from './components/CertificationsSection'
 import { ContactSection } from './components/ContactSection'
 import { HeroSection } from './components/HeroSection'
 import { ProjectsSection } from './components/ProjectsSection'
 import { SkillsSection } from './components/SkillsSection'
+import { TestimonialsSection } from './components/TestimonialsSection'
 import { Ticker } from './components/Ticker'
 import { WritingSection } from './components/WritingSection'
 
@@ -13,6 +15,7 @@ const NAV_LINKS = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Writing', href: '#writing' },
+  { label: 'Certs', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -37,14 +40,14 @@ function Navbar() {
         {/* Logo */}
         <a
           href="#hero"
-          className="font-mono text-sm font-bold uppercase tracking-widest text-ink hover:text-orange transition-colors duration-200"
+          className="font-mono text-sm font-bold uppercase tracking-widest text-ink transition-colors duration-200 hover:text-orange"
           aria-label="Home"
         >
-          GK
+          GS
         </a>
 
         {/* Desktop nav */}
-        <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
@@ -59,14 +62,14 @@ function Navbar() {
         {/* Hire button */}
         <a
           href="#contact"
-          className="hidden border-2 border-ink px-5 py-2 font-mono text-xs font-bold uppercase tracking-widest text-ink transition-all duration-200 hover:bg-ink hover:text-paper md:block"
+          className="hidden border-2 border-ink px-5 py-2 font-mono text-xs font-bold uppercase tracking-widest text-ink transition-all duration-200 hover:bg-ink hover:text-paper lg:block"
         >
           Hire me
         </a>
 
         {/* Mobile menu toggle */}
         <button
-          className="flex flex-col gap-1.5 p-1 md:hidden"
+          className="flex flex-col gap-1.5 p-1 lg:hidden"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
@@ -109,11 +112,18 @@ function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="border-b border-ink/20 py-4 font-mono text-sm font-bold uppercase tracking-widest text-ink hover:text-orange transition-colors duration-200"
+                  className="border-b border-ink/20 py-4 font-mono text-sm font-bold uppercase tracking-widest text-ink transition-colors duration-200 hover:text-orange"
                 >
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+                className="mt-4 border-2 border-ink px-5 py-3 text-center font-mono text-sm font-bold uppercase tracking-widest text-ink transition-all duration-200 hover:bg-ink hover:text-paper"
+              >
+                Hire me
+              </a>
             </div>
           </motion.nav>
         )}
@@ -127,7 +137,7 @@ function App() {
     <div className="min-h-screen bg-paper">
       <Navbar />
 
-      {/* Main content — padded below fixed nav */}
+      {/* Hero */}
       <div className="mx-auto max-w-7xl px-6 pt-20 lg:px-10">
         <HeroSection />
       </div>
@@ -138,12 +148,14 @@ function App() {
         <AboutSection />
       </div>
 
-      {/* Skills — full bleed dark section */}
+      {/* Skills — full bleed dark */}
       <SkillsSection />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <ProjectsSection />
         <WritingSection />
+        <CertificationsSection />
+        <TestimonialsSection />
       </div>
 
       {/* Contact — full bleed dark footer */}
