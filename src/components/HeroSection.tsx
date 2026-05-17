@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/portfolio'
-import { BounceWord } from './BounceWord'
-
 const ease = [0.22, 1, 0.36, 1] as const
 
 const container = {
@@ -55,7 +53,7 @@ export function HeroSection() {
           variants={up}
           className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
         >
-          <BounceWord text="GAURAV" />
+          GAURAV
         </motion.h1>
 
         {/* Name line 2 + floating tagline */}
@@ -65,7 +63,7 @@ export function HeroSection() {
             aria-hidden="true"
             className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
           >
-            <BounceWord text="SHARMA" />
+            SHARMA
           </motion.span>
 
           <motion.div
