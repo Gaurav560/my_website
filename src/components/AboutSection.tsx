@@ -23,12 +23,9 @@ export function AboutSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, ease }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
-              02 / ABOUT
-            </span>
             <h2
               id="about-title"
-              className="mt-3 font-display text-[clamp(3rem,6vw,5rem)] font-black uppercase leading-none tracking-tighter text-ink"
+              className="font-display text-[clamp(3rem,6vw,5rem)] font-black uppercase leading-none tracking-tighter text-ink"
             >
               WHO
               <br />I AM
@@ -49,7 +46,7 @@ export function AboutSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1, ease }}
               className={
-                'border-2 border-ink bg-white p-6 shadow-[4px_4px_0px_#0a0a0a] transition-all duration-300 hover:-translate-y-1 hover:shadow-[4px_4px_0px_#ff5c00]' +
+                'border-2 border-ink bg-white p-6 shadow-brutal-sm theme-transition transition-all duration-300 hover:-translate-y-1 hover:shadow-[4px_4px_0px_#ff5c00]' +
                 (i === 0 ? ' sm:col-span-2' : '')
               }
             >

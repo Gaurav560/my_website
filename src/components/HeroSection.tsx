@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/portfolio'
+import { BounceWord } from './BounceWord'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -34,14 +35,11 @@ export function HeroSection() {
         animate="show"
         className="flex flex-col"
       >
-        {/* Meta row */}
+        {/* Top bar — badge only */}
         <motion.div
           variants={fadeIn}
-          className="mb-8 flex items-center justify-between border-b-2 border-ink pb-5"
+          className="mb-8 flex items-center justify-end border-b-2 border-ink pb-5"
         >
-          <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted">
-            01 / INTRO
-          </span>
           <motion.span
             className="cursor-default border-2 border-orange bg-orange px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-widest text-paper"
             whileHover={{ scale: 1.04 }}
@@ -57,7 +55,7 @@ export function HeroSection() {
           variants={up}
           className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
         >
-          GAURAV
+          <BounceWord text="GAURAV" />
         </motion.h1>
 
         {/* Name line 2 + floating tagline */}
@@ -67,12 +65,12 @@ export function HeroSection() {
             aria-hidden="true"
             className="select-none font-display text-[clamp(4.5rem,13vw,14rem)] font-black uppercase leading-none tracking-tighter text-ink"
           >
-            SHARMA
+            <BounceWord text="SHARMA" />
           </motion.span>
 
           <motion.div
             variants={up}
-            className="mb-2 max-w-[22rem] border-2 border-ink bg-white p-5 shadow-[5px_5px_0px_#0a0a0a]"
+            className="mb-2 max-w-[22rem] border-2 border-ink bg-white p-5 shadow-brutal theme-transition"
           >
             <p className="font-display text-sm font-semibold uppercase leading-loose tracking-wide text-ink">
               Backend Engineer

@@ -18,20 +18,12 @@ export function CertificationsSection() {
       {/* Section header */}
       <div className="mb-12 flex flex-wrap items-end justify-between gap-6 border-b-2 border-ink pb-8">
         <div>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease }}
-            className="font-mono text-xs uppercase tracking-[0.25em] text-muted"
-          >
-            06 / CERTIFICATIONS
-          </motion.span>
           <motion.h2
             id="certs-title"
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="mt-3 font-display text-[clamp(3rem,6vw,5rem)] font-black uppercase leading-none tracking-tighter text-ink"
+            transition={{ duration: 0.5, ease }}
+            className="font-display text-[clamp(3rem,6vw,5rem)] font-black uppercase leading-none tracking-tighter text-ink"
           >
             CLOUD
             <br />
@@ -62,7 +54,7 @@ export function CertificationsSection() {
               className={
                 'flex flex-col justify-between p-7 transition-all duration-300' +
                 (earned
-                  ? ' border-2 border-ink bg-white shadow-[5px_5px_0px_#0a0a0a] hover:-translate-y-1 hover:shadow-[5px_5px_0px_#ff5c00]'
+                  ? ' border-2 border-ink bg-white shadow-brutal hover:-translate-y-1 hover:shadow-[5px_5px_0px_#ff5c00]'
                   : ' border-2 border-dashed border-smoke bg-cream')
               }
             >

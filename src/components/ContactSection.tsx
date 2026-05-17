@@ -18,22 +18,12 @@ export function ContactSection() {
       className="border-t-2 border-ink bg-ink py-20 text-paper lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {/* Section label */}
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, ease }}
-          className="block font-mono text-xs uppercase tracking-[0.25em] text-smoke"
-        >
-          08 / CONTACT
-        </motion.span>
-
         {/* Heading */}
         <motion.h2
           id="contact-title"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1, ease }}
+          transition={{ duration: 0.5, ease }}
           className="mt-4 font-display text-[clamp(3rem,7vw,6rem)] font-black uppercase leading-none tracking-tighter text-paper"
         >
           LET'S
