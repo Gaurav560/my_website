@@ -42,6 +42,7 @@ export const profile = {
   social: [
     { label: 'GitHub', href: 'https://github.com/Gaurav560' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/gaurav4044' },
+    { label: 'X', href: 'https://x.com/1809157Gaurav' },
     { label: 'Email', href: 'mailto:heygaurav54@gmail.com' },
   ],
 }
